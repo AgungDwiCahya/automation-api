@@ -24,5 +24,6 @@ jobs:
     needs: build
     runs-on: ubuntu
     steps:
-        - name : Test API
+        - uses: actions/setup-java@v3
+        - name: Test API
           run : mvn clean verify
