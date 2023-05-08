@@ -19,5 +19,9 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
-      - name : Test API
-        run : mvn clean verify
+  Test:
+    name: TEST API
+    runs-on: ubuntu
+    steps:
+        - name : Test API
+          run : mvn clean verify
